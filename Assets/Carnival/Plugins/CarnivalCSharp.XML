@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarnivalCSharp</name>
+    </assembly>
+    <members>
+        <member name="T:Carnival.Controller">
+                 * @brief
+                 * The Controller class is the main interface to the Carnival SDK.
+                 *
+                 * Create an instance of this Controller class to access frames of tracking data and configuration information.</member>
+        <member name="M:Carnival.Controller.#ctor">
+                	* @brief
+                	* Constructs a controller object.
+                	*</member>
+        <member name="M:Carnival.Controller.Init">
+                	* @brief
+                	* Initalize the controller which will try to connect to the sensor.
+                	*</member>
+        <member name="M:Carnival.Controller.Start">
+                     * @brief
+                     * Starts hand detection and gesture recognition.
+                     *</member>
+        <member name="M:Carnival.Controller.Stop">
+                     * @brief
+                     * Stops hand detection and gesture recognition.
+                     *</member>
+        <member name="M:Carnival.Controller.IsConnected">
+                     * @brief
+                     * Reports whether the hardware is plugged in and this controller is connected to the sensor.
+                     *
+                     * First time a controller object is created, isConnected() returns false.
+                     * After the controller finishes initializing and connects to the sensor using init() and
+                     * the sensor is plugged in, isConnected() returns true.</member>
+        <member name="M:Carnival.Controller.IsRunning">
+                     * @brief
+                     * Reports whether the hand detection and gesture recognition is running.
+                     *
+                     * First time a controller object is created, isRunning() returns false.
+                     * After the controller finishes initializing and connects to the sensor using init() and
+                     * start() was called afterwards, isRunning() returns true.</member>
+        <member name="M:Carnival.Controller.Frame">
+            		 * @brief
+            		 * Returns a frame of tracking data from the controller.
+            		 *
+            		 * A Frame is a set of data recorded at a specific moment in time.</member>
+        <member name="T:Carnival.SwipeDirection">
+                * @brief
+                * The direction into which the detected swipe was performed.</member>
+        <member name="T:Carnival.ClampGesture">
+                * @brief
+                * The ClampGesture class represents a recognized clamp or pinch gesture.
+                *
+                * The clamp gesture is recognized when the tips of the thumb and the index finger touch such that the two fingers form an ellipsoid.
+                * When a clamp gesture is recognized the midpoint of the ellipsoid is computed.</member>
+        <member name="P:Carnival.ClampGesture.Midpoint">
+                    * @brief
+                    * Represents the midpoint of the ellipsoid that the two fingers form when performing the clamp.</member>
+        <member name="T:Carnival.Fingertip">
+            	* @brief
+            	* The Fingertip class stores the tracking results of a single fingertip.</member>
+        <member name="M:Carnival.Fingertip.#ctor">
+                    * @brief Constructs a Fingertip object.
+                    *
+                    * Fingertip instances created with this constructor are invalid.
+                    * Get valid Fingertip objects by calling Controller.Frame().Hands.Fingertips</member>
+        <member name="P:Carnival.Fingertip.Center2D">
+                    * @brief
+                    * Reports the fingertip's center in sensor image coordinates (subpixel).</member>
+        <member name="P:Carnival.Fingertip.Center3D">
+                    * @brief
+                    * Reports the fingertip's center in sensor coordinates given in meters.</member>
+        <member name="P:Carnival.Fingertip.FingertipPoints">
+                    * @brief
+                    * Property holding the points that constitute the fingertip.</member>
+        <member name="P:Carnival.Fingertip.HandId">
+            		* @brief
+            		* The Hand object associated with a fingertip.</member>
+        <member name="P:Carnival.Fingertip.Id">
+            		* @brief
+            		* A unique ID assigned to this Fingertip object, whose value remains the same across consecutive frames
+            		* while the tracked fingertip remains visible.</member>
+        <member name="P:Carnival.Fingertip.IsValid">
+            		* @brief
+            		* Reports whether this is a valid Fingertip object.</member>
+        <member name="P:Carnival.Fingertip.Orientation2D">
+                    * @brief
+                    * Reports the pointing direction of the fingertip in sensor image coordinates (subpixel).</member>
+        <member name="P:Carnival.Fingertip.Orientation3D">
+                    * @brief
+                    * Reports the pointing direction of the fingertip in sensor coordinates given in meters.</member>
+        <member name="T:Carnival.Frame">
+                * @brief
+                * The Frame class stores the tracking results of a single frame.</member>
+        <member name="M:Carnival.Frame.#ctor">
+                    * @brief Constructs a Frame object.
+                    * Frame instances created with this constructor are invalid.
+                    * Get valid Frame objects by calling the Controller.Frame() function.</member>
+        <member name="P:Carnival.Frame.AmplitudeImage">
+                    * @brief
+                    * Provides the amplitude image of the current frame.</member>
+        <member name="P:Carnival.Frame.CurrentTrackingFramesPerSecond">
+                    * @brief
+                    * Reports the rate at which the controller is providing frames of data for tracking in frames per seconds.</member>
+        <member name="P:Carnival.Frame.CurrentSensorFramesPerSecond">
+                    * @brief
+                    * Reports the rate at which the controller is receiving raw data from the sensor in frames per seconds.</member>
+        <member name="P:Carnival.Frame.DepthConfidence">
+                    * @brief
+                    * Provides the depth confidence for each point of the current frame
+                    *
+                    * A depth confidence value of 0 means 'bad' a value &gt; 0 means 'good'.
+                    * The depth condidence can be uses to filter noisy points out
+                    * of the point cloud, e.g. for visualization.</member>
+        <member name="P:Carnival.Frame.Gestures">
+                    * @brief
+                    * Returns a list containing all gestures that have occurred since the last frame.</member>
+        <member name="P:Carnival.Frame.Hands">
+                    * @brief
+                    * Returns a list containing all hands that have been found since the last frame.</member>
+        <member name="P:Carnival.Frame.Id">
+                    * @brief A unique ID for this frame.
+                    * Consecutive frames processed by Carnival controller have consecutive increasing values.
+                    * The frame ID can be used to avoid processing the same Frame object twice.</member>
+        <member name="P:Carnival.Frame.IsValid">
+                    * @brief
+                    * Reports whether the Frame object is valid.
+                    * A valid Frame object is one generated by Carnival controller.
+                    * An invalid Frame object contains no actual tracking data, but you can call its functions without risk of a null pointer.</member>
+        <member name="P:Carnival.Frame.meshData">
+                    * @brief
+                    * Provides the mesh data of the current frame</member>
+        <member name="P:Carnival.Frame.PointCloud">
+                    * @brief
+                    * Provides the raw point cloud data of the current frame</member>
+        <member name="P:Carnival.Frame.Timestamp">
+                    * @brief
+                    * The frame capture time in microseconds elapsed since an arbitrary point in time in the past.</member>
+        <member name="T:Carnival.Gesture">
+                * @brief
+                * The Gesture class represents a recognized movement by the user.
+                *
+                * Carnival watches the activity within the sensor's field of view for
+                * certain movement patterns.</member>
+        <member name="P:Carnival.Gesture.IsValid">
+                    * @brief
+                    * Reports whether this is a valid Gesture object.</member>
+        <member name="P:Carnival.Gesture.Type">
+                    * @brief
+                    * Returns the gesture type as a value from the GestureType enumeration.</member>
+        <member name="T:Carnival.Hand">
+                * @brief
+                * The Hand class stores the tracking results of a single hand.</member>
+        <member name="P:Carnival.Hand.CenterOfGravity">
+                    * @brief
+                    * Reports the center of gravity of the hand.
+                    *
+                    * The center position of the hand is given in meters from the
+                    * sensor origin.</member>
+        <member name="P:Carnival.Hand.Confidence">
+                    * @brief
+                    * How confident is the detection that a hand was detected.
+                    *
+                    * The confidence level ranges between 0.0 and 1.0 inclusive.</member>
+        <member name="P:Carnival.Hand.Fingertips">
+                    * @brief
+                    * Property holding the fingertips that are part of the hand.
+            		*</member>
+        <member name="P:Carnival.Hand.Handedness">
+                    * @brief
+                    * Property holding the handedness of the hand.
+                    *</member>
+        <member name="P:Carnival.Hand.Id">
+                    * @brief
+                    * A unique ID assigned to this Hand object, whose value remains the
+                    * same across consecutive frames while the tracked hand remains visible.</member>
+        <member name="P:Carnival.Hand.IsValid">
+                    * @brief
+                    * Reports whether this is a valid Hand object.</member>
+        <member name="P:Carnival.Hand.Openness">
+                    * @brief
+                    * Property holding the amount of openess of the hand.
+                    *
+                    * The openess level ranges between 0.0 (closed) and 1.0 (open) inclusive.</member>
+        <member name="T:Carnival.MeshData">
+                * @brief
+                * The MeshData class holds the vertices and triangles computed from the pointcloud data of a frame.</member>
+        <member name="P:Carnival.MeshData.triangles">
+                    * @brief
+                    * Provides the triangles of the MeshData object</member>
+        <member name="P:Carnival.MeshData.vertices">
+                    * @brief
+                    * Provides the vertices of the MeshData object</member>
+        <member name="T:Carnival.SwipeGesture">
+                * @brief
+                * The SwipeGesture class represents a recognized swiping motion.
+                *</member>
+        <member name="P:Carnival.SwipeGesture.Direction">
+                    * @brief
+                    * Represents the swipe direction according to the swipe motion.</member>
+        <member name="P:Carnival.SwipeGesture.EndPoint">
+                    * @brief
+                    * Represents the position where the swipe motion detection ended given in meters.</member>
+        <member name="P:Carnival.SwipeGesture.StartPoint">
+                    * @brief
+                    * Represents the position where the swipe motion detection started given in meters.</member>
+        <member name="P:Carnival.SwipeGesture.Time">
+                    * @brief
+                    * Represents the time of the  detected swipe motion in milliseconds.</member>
+        <member name="T:Carnival.GestureType">
+                * @brief
+                * The gesture type.</member>
+        <member name="T:Carnival.Handedness">
+                * @brief
+                * The handedness of a hand.</member>
+    </members>
+</doc>

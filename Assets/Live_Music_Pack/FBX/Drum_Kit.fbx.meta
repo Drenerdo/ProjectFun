@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: 3ac988abba15b6e428346a0f3a9ac0b2
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: BlackPlastic
+    100002: Drum_Insides
+    100004: //RootNode
+    100006: Drum_Skin_Bottom
+    100008: Drum_Skin_Main
+    100010: Drum_Skin_Top
+    100012: Drumkit_Cymbal_01
+    100014: Drumkit_Cymbal_02
+    100016: Drumkit_Cymbal_03
+    100018: Drumkit_Cymbal_04
+    100020: Drums_Body
+    100022: FootPedal_A
+    100024: FootPedal_A_Frame
+    100026: FootPedal_B
+    100028: FootPedal_B_Frame
+    100030: Kick_Drum_Head
+    100032: Rims
+    100034: Stands
+    100036: Stood_Seat
+    100038: Stool_Top
+    100040: Wire
+    400000: BlackPlastic
+    400002: Drum_Insides
+    400004: //RootNode
+    400006: Drum_Skin_Bottom
+    400008: Drum_Skin_Main
+    400010: Drum_Skin_Top
+    400012: Drumkit_Cymbal_01
+    400014: Drumkit_Cymbal_02
+    400016: Drumkit_Cymbal_03
+    400018: Drumkit_Cymbal_04
+    400020: Drums_Body
+    400022: FootPedal_A
+    400024: FootPedal_A_Frame
+    400026: FootPedal_B
+    400028: FootPedal_B_Frame
+    400030: Kick_Drum_Head
+    400032: Rims
+    400034: Stands
+    400036: Stood_Seat
+    400038: Stool_Top
+    400040: Wire
+    2300000: BlackPlastic
+    2300002: Drum_Insides
+    2300004: Drum_Skin_Bottom
+    2300006: Drum_Skin_Main
+    2300008: Drum_Skin_Top
+    2300010: Drumkit_Cymbal_01
+    2300012: Drumkit_Cymbal_02
+    2300014: Drumkit_Cymbal_03
+    2300016: Drumkit_Cymbal_04
+    2300018: Drums_Body
+    2300020: FootPedal_A
+    2300022: FootPedal_A_Frame
+    2300024: FootPedal_B
+    2300026: FootPedal_B_Frame
+    2300028: Kick_Drum_Head
+    2300030: Rims
+    2300032: Stands
+    2300034: Stood_Seat
+    2300036: Stool_Top
+    2300038: Wire
+    3300000: BlackPlastic
+    3300002: Drum_Insides
+    3300004: Drum_Skin_Bottom
+    3300006: Drum_Skin_Main
+    3300008: Drum_Skin_Top
+    3300010: Drumkit_Cymbal_01
+    3300012: Drumkit_Cymbal_02
+    3300014: Drumkit_Cymbal_03
+    3300016: Drumkit_Cymbal_04
+    3300018: Drums_Body
+    3300020: FootPedal_A
+    3300022: FootPedal_A_Frame
+    3300024: FootPedal_B
+    3300026: FootPedal_B_Frame
+    3300028: Kick_Drum_Head
+    3300030: Rims
+    3300032: Stands
+    3300034: Stood_Seat
+    3300036: Stool_Top
+    3300038: Wire
+    4300000: Drums_Body
+    4300002: Drumkit_Cymbal_01
+    4300004: Drumkit_Cymbal_02
+    4300006: Drumkit_Cymbal_03
+    4300008: Drumkit_Cymbal_04
+    4300010: FootPedal_A
+    4300012: FootPedal_A_Frame
+    4300014: FootPedal_B
+    4300016: FootPedal_B_Frame
+    4300018: Stands
+    4300020: BlackPlastic
+    4300022: Drum_Insides
+    4300024: Drum_Skin_Top
+    4300026: Drum_Skin_Bottom
+    4300028: Drum_Skin_Main
+    4300030: Wire
+    4300032: Stood_Seat
+    4300034: Kick_Drum_Head
+    4300036: Stool_Top
+    4300038: Rims
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
